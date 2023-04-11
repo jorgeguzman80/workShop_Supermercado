@@ -23,7 +23,10 @@ class MyAccountManager(BaseUserManager):
         user = self.create_user( 
             email = self.normalize_email(email), 
             username = username, 
-            password = password, first_name = first_name, last_name = last_name, ) 
+            password = password, 
+            first_name = first_name, 
+            last_name = last_name, 
+        ) 
         user.is_admin= True 
         user.is_active = True 
         user.is_staff = True 
@@ -53,6 +56,7 @@ class Usuario(AbstractBaseUser):
     is_staff = models.BooleanField(default=False) 
     is_superadmin = models.BooleanField(default=False) 
     is_active = models.BooleanField(default=False) 
+    
     USERNAME_FIELD = 'email' 
     REQUIRED_FIELDS = ['username', 'first_name', 'last_name'] 
     

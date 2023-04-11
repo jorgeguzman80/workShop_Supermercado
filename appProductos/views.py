@@ -16,8 +16,7 @@ def verCategorias(request):
     }
     #renderizar
 
-    return render(request, 'productos/categorias.hmtl', context)
-
+    return render(request, 'productos/categorias.html', context)
 
 def verProductosCategoria(request, idCategoria):
     # consultar categorias
@@ -34,7 +33,6 @@ def verProductosCategoria(request, idCategoria):
     #renderizar
 
     return render(request, 'productos/productos.html', context)
-
 
 def verProducto(request, idProd, msj = None):
     # consultar
@@ -91,6 +89,7 @@ def verCarrito(request):
     context = consultarCarro(request)
     return render(request, 'productos/carrito.html', context)
 
+
 def eliminarCarrito(request, id): 
     #Consultar el reg y cambiar estado 
     regCarrito = Carro.objects.get(id=id) 
@@ -118,7 +117,8 @@ def cambiarCantidad(request):
             return JsonResponse(context) 
         return JsonResponse({'alarma': 'no se pudo modificar...'}, status=400) 
         
-    else: return verCarrito(request)
+    else: 
+        return verCarrito(request)
 
 
 def consultarCarro(request): 

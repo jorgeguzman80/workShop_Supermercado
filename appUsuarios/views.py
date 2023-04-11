@@ -54,9 +54,9 @@ def registrar(request):
                 user.is_active = True 
                 user.save() 
                 return render(request, 'usuarios/login.html') 
-            else: 
-                return render(request, 'usuarios/registro.html', {'form': form}) 
-                
         else: 
-            form = UsuarioForm() 
-            return render(request, 'usuarios/registro.html', {'form': form})
+            return render(request, 'usuarios/registro.html', {'form': form}) 
+            
+    else: 
+        form = UsuarioForm() 
+        return render(request, 'usuarios/registro.html', {'form': form})

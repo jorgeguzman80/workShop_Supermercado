@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     'appProductos',
     'appUsuarios',
-   # 'widget_tweaks'
+    'widget_tweaks'
 ]
 
 MIDDLEWARE = [
@@ -133,5 +133,5 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'jorguzloz1980@gmail.com'
-EMAIL_HOST_PASSWORD = '              '
+EMAIL_HOST_PASSWORD = 'vbzbdybruvniczuc              '
 EMAIL_USE_TLS = True
